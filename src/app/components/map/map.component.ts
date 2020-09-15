@@ -26,6 +26,9 @@ export class MapComponent implements OnInit {
 
   isCountryHighlighted: any = null
 
+  countriesSuccessful: any[] = new Array();
+
+
   constructor(private communicationService: CommunicationService) { }
 
   ngOnInit(): void {
@@ -47,7 +50,7 @@ export class MapComponent implements OnInit {
 
   //This function initializes the map and layer object
   initMap() {
-    let style = new Style({
+    let initialStyle = new Style({
       fill: new Fill({
         color: '#e8f5f9',
       }),
@@ -64,7 +67,7 @@ export class MapComponent implements OnInit {
         url: Endpoints.WORLD_COUNTRIES_FILE,
         format: new GeoJSON(),
       }),
-      style: style
+      style: initialStyle
     });
 
     this.map = new Map({
@@ -96,7 +99,7 @@ export class MapComponent implements OnInit {
     this.map.un('click', this.callbackClickMapEvent);
   }
 
-  //This function handle apply styles when pointermove event on Map
+  //This function apply styles when pointermove event on Map
   pointerMoveOnCountry(evt: any) {
     let highlightStyle = new Style({
       fill: new Fill({
@@ -113,10 +116,28 @@ export class MapComponent implements OnInit {
     }
 
     this.map.forEachFeatureAtPixel(evt.pixel, (f) => {
-      this.isCountryHighlighted = f;
-      f.setStyle(highlightStyle);
-      return true;
+      let higlighted: boolean;
+      //We have to ensure that we dont highlight countries features that are in countriesSuccessful array that holds
+      //country features that the user answer is correct 
+      if (this.countriesSuccessful.length > 0) {
+        for (let i = 0; i < this.countriesSuccessful.length; i++) {
+          if (this.countriesSuccessful[i].ol_uid !== f.ol_uid) {
+            higlighted = this.highlightCountry(f, highlightStyle);
+            return higlighted;
+          }
+        }
+      } else {
+        higlighted = this.highlightCountry(f, highlightStyle);
+        return higlighted;
+      }
     });
+  }
+
+  //This function sets the higlight style to the country feature on map
+  highlightCountry(feature: any, highlightStyle: Style) {
+    this.isCountryHighlighted = feature;
+    feature.setStyle(highlightStyle);
+    return true;
   }
 
   //This function gets the feature clicked on Map and send it throw service to InfoScoreComponent
@@ -132,22 +153,27 @@ export class MapComponent implements OnInit {
 
   //This function receives the country feature when user answer yes to the question, apply styles to it and unregister Map events
   manageSuccessfulCountry(data: any) {
-    let sucessfulCountry = data;
-    let features = this.countriesVectorImageLayer.getSource().getFeatures();
-    let newStyle = new Style({
-      fill: new Fill({
-        color: 'rgba(94,155,149,.6)',
-      }),
-      stroke: new Stroke({
-        color: '#3399CC',
-        width: 2,
-      }),
-    });
-    for (let i = 0; i < features.length; i++) {
-      if (features[i].ol_uid === sucessfulCountry.ol_uid) {
-        features[i].setStyle(newStyle);
-        this.unregisterMapEvents();
+    if (data !== null) {
+      let sucessfulCountry = data;
+      let features = this.countriesVectorImageLayer.getSource().getFeatures();
+      let newStyle = new Style({
+        fill: new Fill({
+          color: 'rgba(94,155,149,.6)',
+        }),
+        stroke: new Stroke({
+          color: '#3399CC',
+          width: 2,
+        }),
+      });
+      for (let i = 0; i < features.length; i++) {
+        if (features[i].ol_uid === sucessfulCountry.ol_uid) {
+          this.unregisterMapEvents();
+          features[i].setStyle(newStyle);
+          this.countriesSuccessful.push(features[i]);
+        }
       }
+    } else {
+      this.unregisterMapEvents();
     }
   }
 }
