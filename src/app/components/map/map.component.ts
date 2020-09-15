@@ -170,6 +170,7 @@ export class MapComponent implements OnInit {
           this.unregisterMapEvents();
           features[i].setStyle(newStyle);
           this.countriesSuccessful.push(features[i]);
+          this.isCountryHighlighted.setStyle(undefined);
         }
       }
     } else {
