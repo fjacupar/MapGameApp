@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Clone repository
 
-To clone the repository open a command line terminal and run `git clone https://github.com/fjacupar/MapGameApp.git.`
+To clone the repository open a command line terminal and run `git clone https://github.com/fjacupar/MapGameApp.git`.
 
 ## Installing packages
 Go to the root of the project directory (where pacjage.json is located) and run `npm install`.
