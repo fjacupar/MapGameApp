@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* MAP GLOBAL STYLES */
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.ol-zoom {
+    top: 120px;
+    left: -3px;
+}
+
+.ol-control button {
+    height: 50px;
+    width: 50px;
+    cursor: pointer !important;
+    background-color: rgba(54, 76, 104, 0.8);
+}
+    

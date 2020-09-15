@@ -1,0 +1,471 @@
+{
+    "natoCountries": [
+        {
+            "name": "Albania",
+            "flagImage": "assets/images/countries-flags/al.svg",
+            "cities": [
+                {
+                    "name" : "Tirana",
+                    "capital": true
+                },
+                {
+                    "name" : "Durres"
+                },
+                {
+                    "name" : "Elbasan"
+                }
+            ]
+        },
+        {
+            "name": "Belgium",
+            "flagImage": "assets/images/countries-flags/be.svg",
+            "cities": [
+                {
+                    "name" : "Brussels",
+                    "capital": true
+                },
+                {
+                    "name" : "Brugge"
+                },
+                {
+                    "name" : "Gent"
+                }
+            ]
+        },
+        {
+            "name": "Bulgaria",
+            "flagImage": "assets/images/countries-flags/bg.svg",
+            "cities": [
+                {
+                    "name" : "Sofia",
+                    "capital": true
+                },
+                {
+                    "name" : "Plovdiv"
+                },
+                {
+                    "name" : "Varna"
+                }
+            ]
+        },
+        {
+            "name": "Canada",
+            "flagImage": "assets/images/countries-flags/ca.svg",
+            "cities": [
+                {
+                    "name" : "Ottawa",
+                    "capital": true
+                },
+                {
+                    "name" : "Toronto"
+                },
+                {
+                    "name" : "Montreal"
+                }
+            ]
+        },
+        {
+            "name": "Croatia",
+            "flagImage": "assets/images/countries-flags/hr.svg",
+            "cities": [
+                {
+                    "name" : "Zagreb",
+                    "capital": true
+                },
+                {
+                    "name" : "Zadar"
+                },
+                {
+                    "name" : "Istria"
+                }
+            ]
+        },
+        {
+            "name": "Czech Republic",
+            "flagImage": "assets/images/countries-flags/cz.svg",
+            "cities": [
+                {
+                    "name" : "Prague",
+                    "capital": true
+                },
+                {
+                    "name" : "Brno"
+                },
+                {
+                    "name" : "Karlovy Vary"
+                }
+            ]
+
+        },
+        {
+            "name": "Denmark",
+            "flagImage": "assets/images/countries-flags/dk.svg",
+            "cities": [
+                {
+                    "name" : "Copenhagen",
+                    "capital": true
+                },
+                {
+                    "name" : "Oslo"
+                },
+                {
+                    "name" : "Viborg"
+                }
+            ]
+        },
+        {
+            "name": "Estonia",
+            "flagImage": "assets/images/countries-flags/ee.svg",
+            "cities": [
+                {
+                    "name" : "Tallin",
+                    "capital": true
+                },
+                {
+                    "name" : "Tartu"
+                },
+                {
+                    "name" : "Narva"
+                }
+            ]
+            
+        },
+        {
+            "name": "France",
+            "flagImage": "assets/images/countries-flags/fr.svg",
+            "cities": [
+                {
+                    "name" : "Paris",
+                    "capital": true
+                },
+                {
+                    "name" : "Lyon"
+                },
+                {
+                    "name" : "Nantes"
+                }
+            ]
+        },
+        {
+            "name": "Germany",
+            "flagImage": "assets/images/countries-flags/de.svg",
+            "cities": [
+                {
+                    "name" : "Berlin",
+                    "capital": true
+                },
+                {
+                    "name" : "Hamburg"
+                },
+                {
+                    "name" : "Munich"
+                }
+            ]
+        },
+        {
+            "name": "Greece",
+            "flagImage": "assets/images/countries-flags/gr.svg",
+            "cities": [
+                {
+                    "name" : "Athens",
+                    "capital": true
+                },
+                {
+                    "name" : "Patras"
+                },
+                {
+                    "name" : "Piraeus"
+                }
+            ]
+        },
+        {
+            "name": "Hungary",
+            "flagImage": "assets/images/countries-flags/hu.svg",
+            "cities": [
+                {
+                    "name" : "Budapest",
+                    "capital": true
+                },
+                {
+                    "name" : "Debrecen"
+                },
+                {
+                    "name" : "Szeged"
+                }
+            ]
+
+        },
+        {
+            "name": "Iceland",
+            "flagImage": "assets/images/countries-flags/is.svg",
+            "cities": [
+                {
+                    "name" : "Reykjavik",
+                    "capital": true
+                },
+                {
+                    "name" : "Akureyri"
+                },
+                {
+                    "name" : "Húsavík"
+                }
+            ]
+        },
+        {
+            "name": "Italy",
+            "flagImage": "assets/images/countries-flags/it.svg",
+            "cities": [
+                {
+                    "name" : "Rome",
+                    "capital": true
+                },
+                {
+                    "name" : "Milan"
+                },
+                {
+                    "name" : "Turin"
+                }
+            ]
+        },
+        {
+            "name": "Latvia",
+            "flagImage": "assets/images/countries-flags/lv.svg",
+            "cities": [
+                {
+                    "name" : "Riga",
+                    "capital": true
+                },
+                {
+                    "name" : "Valmiera"
+                },
+                {
+                    "name" : "Ventspils"
+                }
+            ]
+        },
+        {
+            "name": "Lithuania",
+            "flagImage": "assets/images/countries-flags/lt.svg",
+            "cities": [
+                {
+                    "name" : "Vilnius",
+                    "capital": true
+                },
+                {
+                    "name" : "Kaunas"
+                },
+                {
+                    "name" : "Klaipėda"
+                }
+            ]
+        },
+        {
+            "name": "Luxembourg",
+            "flagImage": "assets/images/countries-flags/lu.svg",
+            "cities": [
+                {
+                    "name" : "Luxembourg name",
+                    "capital": true
+                },
+                {
+                    "name" : "Remich"
+                },
+                {
+                    "name" : "Wiltz"
+                }
+            ]
+        },
+        {
+            "name": "Montenegro",
+            "flagImage": "assets/images/countries-flags/me.svg",
+            "cities": [
+                {
+                    "name" : "Podgorica",
+                    "capital": true
+                },
+                {
+                    "name" : "Nikšić"
+                },
+                {
+                    "name" : "Herceg Novi"
+                }
+            ]
+        },
+        {
+            "name": "Netherlands",
+            "flagImage": "assets/images/countries-flags/nl.svg",
+            "cities": [
+                {
+                    "name" : "The Hague",
+                    "capital": true
+                },
+                {
+                    "name" : "Amsterdam"
+                },
+                {
+                    "name" : "Rotterdam"
+                }
+            ]
+        },
+        {
+            "name": "Norway",
+            "flagImage": "assets/images/countries-flags/no.svg",
+            "cities": [
+                {
+                    "name" : "Oslo",
+                    "capital": true
+                },
+                {
+                    "name" : "Bergen"
+                },
+                {
+                    "name" : "Trondheim"
+                }
+            ]
+        },
+        {
+            "name": "Poland",
+            "flagImage": "assets/images/countries-flags/pl.svg",
+            "cities": [
+                {
+                    "name" : "Warsaw",
+                    "capital": true
+                },
+                {
+                    "name" : "Kraków"
+                },
+                {
+                    "name" : "Gdańsk "
+                }
+            ]
+        },
+        {
+            "name": "Portugal",
+            "flagImage": "assets/images/countries-flags/pt.svg",
+            "cities": [
+                {
+                    "name" : "Lisbon",
+                    "capital": true
+                },
+                {
+                    "name" : "Faro"
+                },
+                {
+                    "name" : "Lagos"
+                }
+            ]
+        },
+        {
+            "name": "Romania",
+            "flagImage": "assets/images/countries-flags/ro.svg",
+            "cities": [
+                {
+                    "name" : "Bucharest",
+                    "capital": true
+                },
+                {
+                    "name" : "Cluj-Napoca"
+                },
+                {
+                    "name" : "Timișoara"
+                }
+            ]
+        },
+        {
+            "name": "Slovak Republic",
+            "flagImage": "assets/images/countries-flags/sk.svg",
+            "cities": [
+                {
+                    "name" : "Bratislava",
+                    "capital": true
+                },
+                {
+                    "name" : "Košice"
+                },
+                {
+                    "name" : "Prešov"
+                }
+            ]
+        },
+        {
+            "name": "Slovenia",
+            "flagImage": "assets/images/countries-flags/si.svg",
+            "cities": [
+                {
+                    "name" : "Ljubljana",
+                    "capital": true
+                },
+                {
+                    "name" : "Maribor"
+                },
+                {
+                    "name" : "Celje"
+                }
+            ]
+        },
+        {
+            "name": "Spain",
+            "flagImage": "assets/images/countries-flags/es.svg",
+            "cities": [
+                {
+                    "name" : "Madrid",
+                    "capital": true
+                },
+                {
+                    "name" : "Barcelona"
+                },
+                {
+                    "name" : "Seville"
+                }
+            ]
+        },
+        {
+            "name": "Turkey",
+            "flagImage": "assets/images/countries-flags/tr.svg",
+            "cities": [
+                {
+                    "name" : "Ankara",
+                    "capital": true
+                },
+                {
+                    "name" : "Istanbul"
+                },
+                {
+                    "name" : "İzmir"
+                }
+            ]
+        },
+        {
+            "name": "United Kingdom",
+            "flagImage": "assets/images/countries-flags/gb.svg",
+            "cities": [
+                {
+                    "name" : "London",
+                    "capital": true
+                },
+                {
+                    "name" : "Manchester"
+                },
+                {
+                    "name" : "Liverpool"
+                }
+            ]
+        },
+        {
+            "name": "United States",
+            "flagImage": "assets/images/countries-flags/us.svg",
+            "cities": [
+                {
+                    "name" : "Washington",
+                    "capital": true
+                },
+                {
+                    "name" : "New York"
+                },
+                {
+                    "name" : "Los Angeles"
+                }
+            ]
+        }
+    ]
+}

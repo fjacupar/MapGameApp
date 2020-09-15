@@ -1,0 +1,12 @@
+<div class="countries-menu-container" *ngIf="expandCountriesPanel" [ngClass]="this.isParentMenuExpanded ? 'countries-menu-container' : 'minimizeMenu'">
+    <div class="close-countries-menu" (click)="closeCountriesPanel()">
+        <img class="close" src="../../../assets/images/close-icon.png" alt="Close icon">
+    </div>
+    <div class="countries-panel">
+        <h3 class="title-infos">{{natoCountriesText}}</h3>
+        <div class="nato-country" *ngFor="let natoCountry of natoCountries" (click)="selectFlag(natoCountry)">
+            <img class="flag-icon" src={{natoCountry.flagImage}} alt="Country Flag">
+            <div class="country-name">{{natoCountry.name}}</div>    
+        </div>
+    </div>
+</div>

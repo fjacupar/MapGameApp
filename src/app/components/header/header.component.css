@@ -1,0 +1,30 @@
+.logo-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 80;
+}
+
+.header-container {
+    background-color: #49b6ac;
+    z-index: 70;
+    height: 76px;
+    padding-left: 174px;
+    position: relative;
+}
+
+.title {
+    left: 50%;
+    position: absolute;
+    z-index: 50;
+}
+    
+.title-logo {
+    position: relative;
+    left: -50%;    
+}
+
+.logo-img {
+    position: relative;
+    top: -5px;
+}

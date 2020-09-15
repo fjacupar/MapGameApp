@@ -1,0 +1,15 @@
+<div class="lateral-menu-container" [ngClass]="this.isLateralMenuExpanded ? 'open' : 'close'">
+    <div class="toggle">
+        <a href="#" class="image-close-panel" (click)="toggleLateralMenu()">
+            <img src={{iconLateralMenu}} alt="Toggle panel icon">
+        </a>
+    </div>
+    <div class="countries-item" (click)="showNatoCountriesMenu()">
+        <div class="nato-item" [ngClass]="this.isLateralMenuExpanded ? 'show' : 'hide'">
+            <span>{{natoCountriesText}}</span>
+        </div>
+    </div>
+</div>
+    
+<app-countries-panel *ngIf="expandNatoCountriesMenu" (closeCountriesPanelEvent)="checkCountriesPanel($event)" [expandCountriesPanel] = expandNatoCountriesMenu [isParentMenuExpanded]="isLateralMenuExpanded"></app-countries-panel>
+

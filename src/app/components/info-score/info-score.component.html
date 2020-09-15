@@ -1,0 +1,29 @@
+<div class="score-container">
+    <div class="labels-container">
+        <div class="score-label">
+            <span>{{scoreText}} </span>
+            <span id="score">{{scoreValue}}/224</span>
+        </div>
+        <div>
+            <span>{{playedText}} </span>
+            <span id="played-value">{{playedCountries}}/29</span>
+        </div>
+    </div>
+</div>
+
+<div class="flag-container">
+    <img src="../../../assets/images/flag.png" alt="Flag icon">
+    <img class="flag-icon" *ngIf="showCountryFlag" src={{countryFlagSelected.flagImage}} alt="Country flag to find">
+    <span *ngIf="showCountryFlag" class="name">{{countryFlagSelected.name}}</span>
+</div>
+
+<div class="info-container">
+    <div class="message-box">{{infoMessage}}</div>
+    <div class="message-box-question"  *ngIf="showQuestionMessage">
+        <span class="question-option" (click)="validateCountrySelected()">{{yesText}}</span>
+        <span class="question-option" (click)="closeQuestionText()">{{noText}}</span>
+    </div>
+    <div class="message-box-image"></div>
+    <div class="character"></div>
+</div>
+

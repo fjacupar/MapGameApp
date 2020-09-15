@@ -1,0 +1,54 @@
+.lateral-menu-container {
+    height: 875px;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    z-index: 50;
+    width: 300px;
+    background: rgba(54, 76, 104, 0.8);
+    transition: 0.2s all ease-in;
+    overflow: hidden;
+}
+
+.open {
+    right: 0px;
+}
+
+.close {
+    right: -240px;
+}
+
+.show{
+    opacity: 1;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.toggle {
+    background-color: #4D6878;
+    height: 87px;
+}
+
+.image-close-panel {
+    top: 25px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.countries-item {
+    font-size: 12px;
+    transition: 0.2s all ease-in;
+    vertical-align: middle;
+    padding: 20px 10px;
+    width: 100%;
+    display: inline-block;
+    height: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    background-color: #75C1BA;
+    cursor: pointer;
+}
+

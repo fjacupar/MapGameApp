@@ -1,0 +1,143 @@
+.score-container {
+    position: absolute;
+    z-index: 50;
+    background: rgba(54, 76, 104, 0.8);
+    width: 223px;
+    height: 150px;
+    top: 123px;
+    left: 50px;
+    color: white;
+}
+
+.labels-container {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    pointer-events: none;
+    position: absolute;
+    left: 65px;
+    text-transform: uppercase;
+    top: 25px;
+    z-index: 50;
+    margin-right: 10px;
+}
+
+.score-label {
+    margin-bottom: 10px;
+}
+
+.flag-container {
+    pointer-events: none;
+    position: absolute;
+    left: 95px;
+    top: 215px;
+    width: 180px;
+    z-index: 50;
+}
+
+.info-container {
+    background: rgba(54, 76, 104, 0.8);
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 250px;
+    width: 325px;
+    z-index: 20;
+}
+
+.message-box {
+    text-align: center;
+    background-color: #FF5252;
+    border-radius: 0px;
+    min-height: 100px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    left: 110px;
+    padding: 22px 22px;
+    pointer-events: none;
+    position: absolute;
+    text-transform: uppercase;
+    top: 10px;
+    width: 100%;
+    max-width: 160px;
+    z-index: 20;
+}
+
+.message-box-image {
+    background-image: url(../../../assets/images/message-box-image.png);
+    background-repeat: no-repeat;
+    background-size: 30px 27px;
+    height: 46px;
+    left: 80px;
+    pointer-events: none;
+    position: absolute;
+    top: 120px;
+    width: 36px;
+    z-index: 1;
+}
+
+.character {
+    pointer-events: none;
+    position: absolute;
+    bottom: 30px;
+    left: 19px;
+    background-image: url(../../../assets/images/character.png);
+    background-repeat: no-repeat;
+    background-size: 100px 130px;
+    width: 100px;
+    height: 130px;
+}
+
+.flag-icon {
+    height: 30px;
+    width: 40px;
+    left: 45px;
+    margin-bottom: 3px;
+    position: absolute;
+}
+
+.name {
+    position: absolute;
+    top: 10px;
+    left: 91px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 10px;
+    color: white;
+}
+
+.message-box-question {
+    background-color: #FF5252;
+    border-radius: 0px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    left: 110px;
+    padding: 10px 22px;
+    pointer-events: none;
+    position: absolute;
+    text-transform: uppercase;
+    top: 48px;
+    width: 100%;
+    max-width: 160px;
+    z-index: 20;
+    height: 62px;
+}
+
+.question-option {
+    cursor: pointer;
+    display: block;
+    margin: 10px 50px;
+    padding: 4px;
+    pointer-events: auto;
+    text-align: center;
+    color: #FFFFFF;
+    border: 2px solid #fff;
+    padding: 4px 8px;
+    background: #ff5252;
+    transition: 0.2s all ease-in;
+}
