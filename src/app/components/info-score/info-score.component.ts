@@ -18,9 +18,13 @@ export class InfoScoreComponent implements OnInit {
 
   noText: string = Messages.NO_INFO_MESSAGE;
 
-  scoreValue: number = 0;
+  currentScoreValue: number = 0;
 
-  playedCountries: number = 0;
+  totalScoreValue: number = 145;
+
+  currentPlayedCountries: number = 0;
+
+  totalCountriestoPlay: number = 29;
 
   showCountryFlag: boolean;
 
@@ -71,13 +75,16 @@ export class InfoScoreComponent implements OnInit {
       this.communicationService.setSuccessfulCountry(this.countryFeature);
       this.showQuestionMessage = false;
       this.showCountryFlag = false;
-      this.scoreValue +=5;
-      this.playedCountries +=1;
+      this.currentScoreValue +=5;
+      this.currentPlayedCountries +=1;
       this.infoMessage = Messages.SUCCESS_COUNTRY_SELECTED_INFO_MESSAGE + ' ' + Messages.INSTRUCTION_INFO_MESSAGE;
     } else {
+      //If the country answer is wrong we send a null value to manageSuccessfulCountry method of MapComponent through the
+      //CommunicationService 
+      this.communicationService.setSuccessfulCountry(null);
       this.showQuestionMessage = false;
       this.showCountryFlag = false;
-      this.playedCountries +=1;
+      this.currentPlayedCountries +=1;
       this.infoMessage = Messages.ERROR_COUNTRY_SELECTED_INFO_MESSAGE + ' ' + Messages.INSTRUCTION_INFO_MESSAGE ;
     }
   }
