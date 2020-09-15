@@ -168,13 +168,13 @@ export class MapComponent implements OnInit {
         if (features[i].ol_uid === sucessfulCountry.ol_uid) {
           features[i].setStyle(newStyle);
           this.countriesSuccessful.push(features[i]);
-          this.unregisterMapEvents();
           // this.isCountryHighlighted = null;
           // this.highlighted = false;
           if (this.isCountryHighlighted !== null) {
             this.isCountryHighlighted.setStyle(undefined);
             this.isCountryHighlighted = null;
           }
+          this.unregisterMapEvents();
         }
       }
     } else {
