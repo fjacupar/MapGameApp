@@ -28,6 +28,8 @@ export class MapComponent implements OnInit {
 
   countriesSuccessful: any[] = new Array();
 
+  highlighted: boolean;
+
 
   constructor(private communicationService: CommunicationService) { }
 
@@ -116,19 +118,16 @@ export class MapComponent implements OnInit {
     }
 
     this.map.forEachFeatureAtPixel(evt.pixel, (f) => {
-      let higlighted: boolean;
       //We have to ensure that we dont highlight countries features that are in countriesSuccessful array that holds
       //country features that the user answer is correct 
       if (this.countriesSuccessful.length > 0) {
-        for (let i = 0; i < this.countriesSuccessful.length; i++) {
-          if (this.countriesSuccessful[i].ol_uid !== f.ol_uid) {
-            higlighted = this.highlightCountry(f, highlightStyle);
-            return higlighted;
-          }
+        if (this.countriesSuccessful.indexOf(f) === -1) {
+            this.highlighted = this.highlightCountry(f, highlightStyle);
+            return this.highlighted;
         }
       } else {
-        higlighted = this.highlightCountry(f, highlightStyle);
-        return higlighted;
+        this.highlighted = this.highlightCountry(f, highlightStyle);
+        return this.highlighted;
       }
     });
   }
@@ -167,10 +166,15 @@ export class MapComponent implements OnInit {
       });
       for (let i = 0; i < features.length; i++) {
         if (features[i].ol_uid === sucessfulCountry.ol_uid) {
-          this.unregisterMapEvents();
           features[i].setStyle(newStyle);
           this.countriesSuccessful.push(features[i]);
-          this.isCountryHighlighted.setStyle(undefined);
+          this.unregisterMapEvents();
+          // this.isCountryHighlighted = null;
+          // this.highlighted = false;
+          if (this.isCountryHighlighted !== null) {
+            this.isCountryHighlighted.setStyle(undefined);
+            this.isCountryHighlighted = null;
+          }
         }
       }
     } else {
