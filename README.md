@@ -15,5 +15,4 @@ Run `ng serve` for a local dev server. Navigate to `http://localhost:4200/`. The
 
 ## Build
 
-Run `ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory. Tipically you will host the dist folder in a server
-to serve the app but you can serve the dist folder in local by running `ng serve --prod`. This starts a local HTTP server with production files. Navigate to http://localhost:4200/ to view the application.
+Run `ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory. Tipically you will host the dist folder in a production server to serve the app but you can serve the dist folder in local by running `ng serve --prod`. This starts a local HTTP server with production files. Navigate to http://localhost:4200/ to view the application.
