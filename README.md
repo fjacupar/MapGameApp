@@ -9,6 +9,9 @@ To clone the repository open a command line terminal and run `git clone https://
 ## Installing packages
 Go to the root of the project directory (where pacjage.json is located) and run `npm install`.
 
+## Angular-cli
+If angular-cli is not installed run `npm install -g @angular/cli`.
+
 ## Development server
 
 Run `ng serve` for a local dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
