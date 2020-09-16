@@ -103,6 +103,7 @@ export class InfoScoreComponent implements OnInit {
     }
   }
 
+  //This function checks if the country selected has been played/used before
   checkIfCountryPlayedBefore() {
     let playedBefore = false;
     if (this.countriesPlayed.length > 0 && this.countriesPlayed.some(country => country.name === this.countryFlagSelected.name)) {

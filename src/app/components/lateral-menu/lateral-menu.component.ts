@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Paths } from '../../constants/paths';
 import { Messages } from '../../constants/messages';
 
 @Component({
@@ -8,7 +9,7 @@ import { Messages } from '../../constants/messages';
 })
 export class LateralMenuComponent implements OnInit {
 
-  iconLateralMenu: string = Messages.CLOSE_PANEL_ICON_URL;
+  iconLateralMenu: string = Paths.CLOSE_PANEL_ICON_URL;
 
   natoCountriesText: string = Messages.NATO_COUNTRIES_TEXT;
 
@@ -21,18 +22,18 @@ export class LateralMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //This method handles the toggle of the lateral menu 
+  //This function handles the toggle of the lateral menu 
   toggleLateralMenu() {
     if (this.isLateralMenuExpanded === true) {
       this.isLateralMenuExpanded = false;
-      this.iconLateralMenu = Messages.OPEN_PANEL_ICON_URL;
+      this.iconLateralMenu = Paths.OPEN_PANEL_ICON_URL;
     } else {
       this.isLateralMenuExpanded = true;
-      this.iconLateralMenu = Messages.CLOSE_PANEL_ICON_URL;
+      this.iconLateralMenu = Paths.CLOSE_PANEL_ICON_URL;
     }
   }
 
-  //This method shows/hides the panel with flags of NATO countries
+  //This function shows/hides the panel with flags of NATO countries
   showNatoCountriesMenu() {
     if (this.expandNatoCountriesMenu === false) {
       this.expandNatoCountriesMenu = true;
@@ -41,7 +42,7 @@ export class LateralMenuComponent implements OnInit {
     }
   }
 
-  //This method set expandNatoCountriesMenu property to false when the countries panel has been closed
+  //This function set expandNatoCountriesMenu property to false when the countries panel has been closed
   checkCountriesPanel(isOpenCountriesPanel: boolean) {
     if (isOpenCountriesPanel === false) {
       this.expandNatoCountriesMenu = false;

@@ -5,7 +5,7 @@ import VectorImageLayer from 'ol/layer/VectorImage';
 import GeoJSON from 'ol/format/GeoJSON';
 import { Fill, Stroke, Style } from 'ol/style';
 import VectorSource from 'ol/source/Vector';
-import { Endpoints } from '../../constants/endpoints';
+import { Paths } from '../../constants/paths';
 import { CommunicationService } from '../../services/communication.service';
 
 
@@ -62,11 +62,11 @@ export class MapComponent implements OnInit {
       })
     });
 
-    //VectorImageLayer for faster rendering during interaction and animations
+    //VectorImageLayer for faster rendering during interaction and animations 
     this.countriesVectorImageLayer = new VectorImageLayer({
       imageRatio: 1,
       source: new VectorSource({
-        url: Endpoints.WORLD_COUNTRIES_FILE,
+        url: Paths.WORLD_COUNTRIES_FILE,
         format: new GeoJSON(),
       }),
       style: initialStyle

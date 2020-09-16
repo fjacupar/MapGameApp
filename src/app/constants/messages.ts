@@ -15,6 +15,4 @@ export class Messages {
     public static RIGHT_CAPITAL_SELECTED_INFO_MESSAGE ='The capital city of  {{}} is : {{}}';
     public static COUNTRY_PLAYED_BEFORE_TEXT = "Country played before";
     public static NATO_COUNTRIES_TEXT = 'NATO MEMBER COUNTRIES';
-    public static CLOSE_PANEL_ICON_URL = "assets/images/close-panel.png";
-    public static OPEN_PANEL_ICON_URL = "assets/images/open-panel.png";
  }

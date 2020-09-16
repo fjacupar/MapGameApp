@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Messages } from '../../constants/messages';
-import { Endpoints } from '../../constants/endpoints';
+import { Paths } from '../../constants/paths';
 import { DataService } from '../../services/data.service';
 import { CommunicationService } from '../../services/communication.service';
 import { NatoCountryModel } from '../../models/natoCountry.model'
@@ -30,7 +30,7 @@ export class CountriesPanelComponent implements OnInit {
 
   //This function get Nato Countries from local geojson file by using DataService and its findAll method with http get
   getNatoCountries() {
-    this.dataService.findAll(Endpoints.NATO_COUNTRIES_FILE).subscribe(response => {
+    this.dataService.findAll(Paths.NATO_COUNTRIES_FILE).subscribe(response => {
       this.natoCountries = response.natoCountries;
     });
   }
