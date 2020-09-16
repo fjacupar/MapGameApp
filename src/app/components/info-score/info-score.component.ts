@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Messages } from '../../constants/messages';
+import { Values } from '../../constants/values';
 import { CommunicationService } from '../../services/communication.service';
 import { NatoCountryModel } from '../../models/natoCountry.model'
 
@@ -18,13 +19,13 @@ export class InfoScoreComponent implements OnInit {
 
   noText: string = Messages.NO_INFO_MESSAGE;
 
-  currentScoreValue: number = 0;
+  currentScoreValue: number = Values.CURRENT_SCORE_VALUE;
 
-  totalScoreValue: number = 145;
+  totalScoreValue: number = Values.TOTAL_SCORE_VALUE;
 
-  currentPlayedCountries: number = 0;
+  currentPlayedCountries: number = Values.CURRENT_PLAYED_COUNTRIES;
 
-  totalCountriestoPlay: number = 29;
+  totalCountriestoPlay: number = Values.TOTAL_NATO_COUNTRIES_TO_PLAY;
 
   showCountryFlag: boolean;
 
